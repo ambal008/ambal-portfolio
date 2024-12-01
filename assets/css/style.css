@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 :root {
-  --primary: #12bdff;
+  --primary: rgb(30, 77, 253);
   --dark-primary: #1b1f24; /* variables*/
 }
 * {
@@ -11,7 +11,7 @@
 }
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--dark-primary);
   padding: 25px 20px;
@@ -26,39 +26,121 @@ header .logo {
   font-weight: bold;
   letter-spacing: 1.4px;
 }
-ul {
+header ul {
   list-style: none;
   display: flex;
   margin-left: 200px;
 }
 
-ul li {
+header ul li {
   margin-right: 30px;
 }
 
-ul li a {
+header ul li a {
+  font-family: "Nunito Sans", sans-serif;
   color: white;
   text-decoration: none;
+  font-weight: 700;
 }
 
-ul li :hover {
+header ul li :hover {
   color: var(--primary);
 
   /* background-color: var(--primary); */
 }
 
-header button {
-  padding: 10px 20px;
-  font-family: "Nunito Sans";
+/* hero homepage*/
+
+section.hero-section {
+  display: flex;
+  font-family: "Nunito Sans", sans-serif;
   background-color: var(--dark-primary);
-  font-weight: 700;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  border-radius: 5px;
+  color: white;
+  align-items: center;
+  padding: 20px 120px 0 120px;
 }
 
-header button:hover {
+.hero-section #heroimg1 {
+  width: 400px;
+  padding: 0 50px;
+}
+
+.hero-section__title {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.hero-section__title span {
+  color: var(--primary);
+}
+
+.hero-section__desc {
+  color: #d1dec8;
+}
+.social-icons {
+  margin: 20px 0;
+  display: flex;
+}
+
+.social-icons li {
+  margin-right: 15px;
+}
+.social-icons {
+  list-style: none;
+}
+.social-icons li > a {
+  color: white;
+  text-decoration: none;
+}
+.social-icons li a > i {
+  font-size: x-large;
+}
+.social-icons li a > i.fa-linkedin:hover {
+  color: rgb(21, 134, 205);
+}
+.social-icons li a > i.fa-instagram:hover {
+  color: rgb(225, 3, 224);
+}
+.social-icons li a > i.fa-github:hover {
+  color: rgb(22, 23, 20);
+  background-color: white;
+  border-radius: 50px;
+}
+
+.btn {
+  font-family: "Nunito Sans";
+  padding: 10px 20px;
+  border-radius: 1px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.btn.btn-primary {
+  background-color: var(--primary);
+
+  color: white;
+}
+
+.btn.btn-primary:hover {
+  background-color: white;
+  color: var(--dark-primary);
+}
+.btn-dark {
+  background-color: var(--dark-primary);
+
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 1px;
+  /* box-shadow: 10px 20px 30px var(--primary); */
+}
+
+.btn-dark:hover {
   cursor: pointer;
   background-color: var(--primary);
   color: white;
+}
+
+.hero-buttons button {
+  margin-right: 10px;
 }
